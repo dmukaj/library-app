@@ -1,0 +1,242 @@
+[
+  {
+    "title": "Things Fall Apart",
+    "author": "Chinua Achebe",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/things-fall-apart.jpg"
+  },
+  {
+    "title": "Fairy tales",
+    "author": "Hans Christian Andersen",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/fairy-tales.jpg"
+  },
+  {
+    "title": "The Divine Comedy",
+    "author": "Dante Alighieri",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/the-divine-comedy.jpg"
+  },
+  {
+    "title": "The Epic Of Gilgamesh",
+    "author": "Unknown",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/the-epic-of-gilgamesh.jpg"
+  },
+  {
+    "title": "The Book Of Job",
+    "author": "Unknown",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/the-book-of-job.jpg"
+  },
+  {
+    "title": "One Thousand and One Nights",
+    "author": "Unknown",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/one-thousand-and-one-nights.jpg"
+  },
+  {
+    "title": "Njál's Saga",
+    "author": "Unknown",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/njals-saga.jpg"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/pride-and-prejudice.jpg"
+  },
+  {
+    "title": "Le Père Goriot",
+    "author": "Honoré de Balzac",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/le-pere-goriot.jpg"
+  },
+  {
+    "title": "Molloy, Malone Dies, The Unnamable, the trilogy",
+    "author": "Samuel Beckett",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/molloy-malone-dies-the-unnamable.jpg"
+  },
+  {
+    "title": "The Decameron",
+    "author": "Giovanni Boccaccio",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/the-decameron.jpg"
+  },
+  {
+    "title": "Ficciones",
+    "author": "Jorge Luis Borges",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/ficciones.jpg"
+  },
+  {
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/wuthering-heights.jpg"
+  },
+  {
+    "title": "The Stranger",
+    "author": "Albert Camus",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/l-etranger.jpg"
+  },
+  {
+    "title": "Poems",
+    "author": "Paul Celan",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/poems-paul-celan.jpg"
+  },
+  {
+    "title": "Journey to the End of the Night",
+    "author": "Louis-Ferdinand Céline",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/voyage-au-bout-de-la-nuit.jpg"
+  },
+  {
+    "title": "Don Quijote De La Mancha",
+    "author": "Miguel de Cervantes",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/don-quijote-de-la-mancha.jpg"
+  },
+  {
+    "title": "The Canterbury Tales",
+    "author": "Geoffrey Chaucer",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/the-canterbury-tales.jpg"
+  },
+  {
+    "title": "Stories",
+    "author": "Anton Chekhov",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/stories-of-anton-chekhov.jpg"
+  },
+  {
+    "title": "Nostromo",
+    "author": "Joseph Conrad",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/nostromo.jpg"
+  },
+  {
+    "title": "Great Expectations",
+    "author": "Charles Dickens",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/great-expectations.jpg"
+  },
+  {
+    "title": "Jacques the Fatalist",
+    "author": "Denis Diderot",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/jacques-the-fatalist.jpg"
+  },
+  {
+    "title": "Berlin Alexanderplatz",
+    "author": "Alfred Döblin",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/berlin-alexanderplatz.jpg"
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/crime-and-punishment.jpg"
+  },
+  {
+    "title": "The Idiot",
+    "author": "Fyodor Dostoevsky",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/the-idiot.jpg"
+  },
+  {
+    "title": "The Possessed",
+    "author": "Fyodor Dostoevsky",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/the-possessed.jpg"
+  },
+  {
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoevsky",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/the-brothers-karamazov.jpg"
+  },
+  {
+    "title": "The Goblet of Fire",
+    "author": "J. K. Rowling",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/GobletOfFire.jpg"
+  },
+  {
+    "title": "Harry Potter",
+    "author": "J. K. Rowling",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/HarryPotter.jpg"
+  },
+  {
+    "title": "Da vinci Code",
+    "author": "Dan Brown",
+    "numberInStock": 10,
+    "dailyRentalRate": 5,
+    "favorited": false,
+    "imageLink": "images/DaVinci.jpg"
+  }
+]
