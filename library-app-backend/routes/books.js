@@ -27,6 +27,7 @@ router.post("/", async (req, res) => {
       numberInStock: req.body.numberInStock,
       dailyRentalRate: req.body.dailyRentalRate,
       imageLink: req.body.imageLink,
+      favorited: req.body.favorited,
     });
     await book.save();
 

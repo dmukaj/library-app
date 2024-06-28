@@ -32,7 +32,7 @@ const bookSchema = new mongoose.Schema({
   },
   imageLink: {
     type: String,
-    required: true,
+    default: false,
   },
 });
 
@@ -42,7 +42,7 @@ function validateBook(book) {
     author: Joi.string().required(),
     numberInStock: Joi.number().min(0).required(),
     dailyRentalRate: Joi.number().min(0).required(),
-    favorited: Joi.boolean().required(),
+    favorited: Joi.boolean(),
     imageLink: Joi.string().required(),
   });
   return schema.validate(book);

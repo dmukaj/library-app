@@ -1,9 +1,7 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
-dotenv .config();
-
-//const logger = require("./startup/logging");
+dotenv.config();
 
 require("./startup/db")(app);
 require("./startup/routes")(app);

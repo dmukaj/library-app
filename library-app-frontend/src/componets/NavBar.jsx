@@ -4,10 +4,11 @@ import { AiFillHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { BsBook as Catalog } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
-import {CartContext} from "../CartContext";
+import { FavoritesContext } from "../FavoritesContext";
+import { FaHeart } from "react-icons/fa";
 
 function NavBar() {
-  const { getTotalQuantity } = useContext(CartContext);
+  const { getTotalQuantity } = useContext(FavoritesContext);
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -39,13 +40,18 @@ function NavBar() {
           </NavLink>
 
           <NavLink
-            to="/checkout"
+            to="/favoriteBooks"
             className="relative inline-flex p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group"
           >
-            <BsFillCartCheckFill className="w-5 h-5 mr-2 text-gray-500 dark:text-blue-500" />
-            Check Out
-            {getTotalQuantity() > 0 ? <div className="absolute transition-opacity inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-1 -right-1 dark:border-gray-900">{getTotalQuantity()}</div> : ""}
-    
+            <FaHeart className="w-5 h-5 mr-2 text-gray-500 dark:text-blue-500" />
+            Favorites
+            {getTotalQuantity() > 0 ? (
+              <div className="absolute transition-opacity inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-1 -right-1 dark:border-gray-900">
+                {getTotalQuantity()}
+              </div>
+            ) : (
+              ""
+            )}
           </NavLink>
         </ul>
       </div>
@@ -105,11 +111,10 @@ function NavBar() {
                 Catalog
               </NavLink>
               <NavLink
-                to="/checkout"
+                to="/favoriteBooks"
                 className="p-3 transition-all hover:scale-110 cursor-pointer"
               >
                 Check Out
-                
               </NavLink>
             </ul>
           </div>

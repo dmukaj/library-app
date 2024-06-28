@@ -2,13 +2,13 @@ import { useContext, useState } from "react";
 import { BsTrash } from "react-icons/bs";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { AiOutlineMinusCircle } from "react-icons/ai";
-import { CartContext } from "../CartContext";
+import { FavoritesContext } from "../FavoritesContext";
 import { Link } from "react-router-dom";
 import apiClient from "../services/api-client";
 
 function CheckOut() {
   const { items, setItems, removeFromCart, cartTotal } =
-    useContext(CartContext);
+    useContext(FavoritesContext);
   const [isPurchaseComplete, setIsPurchaseComplete] = useState(false);
 
   const handleQuantityChange = (item, quantity) => {
