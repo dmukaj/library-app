@@ -1,4 +1,4 @@
-import apiClient from "../services/api-client";
+import apiClient from "../api/api-client";
 import { useEffect, useState } from "react";
 
 export default function Blog() {
@@ -6,12 +6,11 @@ export default function Blog() {
   useEffect(() => {
     apiClient.get("/books").then((res) => setBooks(res.data));
   }, []);
-  console.log(books);
 
   return (
     <div>
       <h2 className="text-white text-5xl font-bold text-center mt-10 p-4">
-        Your Favourite Books
+        My Finished Books
       </h2>
       <div className=" px-20 relative w-full flex space-x-20 gap-4 py-6 overflow-x-auto scroll-m-0">
         {books?.map((book) => {

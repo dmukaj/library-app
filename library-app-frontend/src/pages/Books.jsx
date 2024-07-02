@@ -1,22 +1,36 @@
 import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
-import apiClient from "../services/api-client";
+import apiClient from "../api/api-client";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
-import { FavoritesContext } from "../FavoritesContext";
+import { FavoritesContext } from "../auth/FavoritesContext";
 
 function Books() {
   const [books, setBooks] = useState();
   const [favorite, setFavorite] = useState(false);
-  const { addToFavorites } = useContext(FavoritesContext);
+  const { addToFavorites, removeFromFavorites, setTotalQuantity } =
+    useContext(FavoritesContext);
 
   const handleFavorite = (book) => {
-    addToFavorites(book);
-    setFavorite((prevState) => !prevState);
+    if (book.favorited) {
+      removeFromFavorites(book);
+      apiClient.post("/favorites", {
+        _id: book._id,
+        favorited: false,
+      });
+    } else {
+      addToFavorites(book);
+      apiClient.post("/favorites", {
+        _id: book._id,
+        favorited: true,
+      });
+    }
 
-    apiClient.post("/favorites", {
-      _id: book._id,
-    });
+    setBooks((prevBooks) =>
+      prevBooks.map((b) =>
+        b._id === book._id ? { ...b, favorited: !b.favorited } : b
+      )
+    );
   };
 
   useEffect(() => {
@@ -36,8 +50,7 @@ function Books() {
                 <h5>{book.title}</h5>
 
                 <button onClick={() => handleFavorite(book)}>
-                  {/* {book.favorited ? <FaHeart /> : <FaRegHeart />} */}
-                  <FaHeart />
+                  {book.favorited === false ? <FaRegHeart /> : <FaHeart />}
                 </button>
               </div>
 

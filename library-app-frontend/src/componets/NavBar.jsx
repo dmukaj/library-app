@@ -1,14 +1,13 @@
 import { useContext, useState } from "react";
-import { BsFillCartCheckFill } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { BsBook as Catalog } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
-import { FavoritesContext } from "../FavoritesContext";
+import { FavoritesContext } from "../auth/FavoritesContext";
 import { FaHeart } from "react-icons/fa";
 
 function NavBar() {
-  const { getTotalQuantity } = useContext(FavoritesContext);
+  const { totalQuantity } = useContext(FavoritesContext);
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -45,13 +44,11 @@ function NavBar() {
           >
             <FaHeart className="w-5 h-5 mr-2 text-gray-500 dark:text-blue-500" />
             Favorites
-            {getTotalQuantity() > 0 ? (
+            {totalQuantity > 0 ? (
               <div className="absolute transition-opacity inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-1 -right-1 dark:border-gray-900">
-                {getTotalQuantity()}
+                {totalQuantity}
               </div>
-            ) : (
-              ""
-            )}
+            ) : null}
           </NavLink>
         </ul>
       </div>
@@ -114,7 +111,7 @@ function NavBar() {
                 to="/favoriteBooks"
                 className="p-3 transition-all hover:scale-110 cursor-pointer"
               >
-                Check Out
+                Favorites
               </NavLink>
             </ul>
           </div>

@@ -6,24 +6,27 @@ import Profile from "./pages/Profile";
 import Account from "./pages/Account";
 import Books from "./pages/Books";
 import FavoriteBooks from "./pages/FavoriteBooks";
-import { FavoriteProvider } from "./FavoritesContext";
+import { FavoriteProvider } from "./auth/FavoritesContext";
+import { CurrentUserProvider } from "./auth/UserContext";
 
 function App() {
   return (
     <div className="bg-gray-100 dark:bg-gray-900 h-screen">
-      <FavoriteProvider>
-        <Router location={location} key={location.pathname}>
-          <DarkModeToggle />
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/account" element={<Account />} />
-            <Route path="/books" element={<Books />} />
-            <Route path="favoriteBooks" element={<FavoriteBooks />} />
-          </Routes>
-        </Router>
-      </FavoriteProvider>
+      <CurrentUserProvider>
+        <FavoriteProvider>
+          <Router location={location} key={location.pathname}>
+            <DarkModeToggle />
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/account" element={<Account />} />
+              <Route path="/books" element={<Books />} />
+              <Route path="favoriteBooks" element={<FavoriteBooks />} />
+            </Routes>
+          </Router>
+        </FavoriteProvider>
+      </CurrentUserProvider>
     </div>
   );
 }
