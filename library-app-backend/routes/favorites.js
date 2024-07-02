@@ -22,7 +22,7 @@ router.post("/", async (req, res) => {
       return res.status(404).send("Book not found.");
     }
 
-    favoriteBook.favorited = true;
+    favoriteBook.favorited = req.body.favorited;
     await favoriteBook.save();
 
     res.send(favoriteBook);
