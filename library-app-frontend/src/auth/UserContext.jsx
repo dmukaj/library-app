@@ -7,13 +7,10 @@ export const CurrentUserProvider = ({ children }) => {
   const [curentUser, setCurrentUser] = useState(null);
 
   const fetchCurrentUser = async () => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      apiClient.defaults.headers.common["Authorization"] = `Bearer $ {token}`;
-      await apiClient.fetch("/me").then((res) => {
-        setCurrentUser(res.data);
-      });
-    }
+    console.log("result");
+    await apiClient.get("/users/me").then((res) => {
+      setCurrentUser(res.data);
+    });
   };
 
   useEffect(() => {

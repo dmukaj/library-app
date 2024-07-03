@@ -6,7 +6,8 @@ const bcrypt = require("bcrypt");
 const auth = require("../middleware/auth");
 
 router.get("/me", auth, async (req, res) => {
-  const user = await User.findById(req.user._id).select("-password");
+  console.log("here");
+  const user = await User.findById(req.user._id).select("email");
   res.send(user);
 });
 
@@ -18,7 +19,8 @@ router.post("/", async (req, res) => {
 
   try {
     let user = await User.findOne({ email: req.body.email });
-    if (user) return res.status(400).send("User already registered.");
+    if (user) return res.status(400).send("User already registered");
+    console.log("test ok", user);
 
     user = new User(_.pick(req.body, ["email", "password"]));
     const salt = await bcrypt.genSalt(10);

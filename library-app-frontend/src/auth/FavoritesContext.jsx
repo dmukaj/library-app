@@ -44,13 +44,9 @@ function FavoriteProvider({ children }) {
 
   useEffect(() => {
     const fetchFavorites = async () => {
-      const token = localStorage.getItem("token");
-      if (token) {
-        apiClient.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-        const res = await apiClient.get("/favorites");
-        setItems(res.data);
-        setTotalQuantity(res.data.length);
-      }
+      const res = await apiClient.get("/favorites");
+      setItems(res.data);
+      setTotalQuantity(res.data.length);
     };
 
     fetchFavorites();

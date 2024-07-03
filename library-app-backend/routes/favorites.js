@@ -2,8 +2,9 @@ const { Book } = require("../models/book");
 const mongoose = require("mongoose");
 const express = require("express");
 const router = express.Router();
+const auth = require("../middleware/auth");
 
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
   try {
     const favorites = await Book.find({ favorited: true }).sort("title");
     // console.log(favorites);
